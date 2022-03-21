@@ -1,4 +1,5 @@
-export default function handler(req, res) {
+function handler(req, res) {
+ if(req == "certificado"){
   res.status(200).json([
     {
       "Titulo"  : "Javascript desde Cero",
@@ -66,5 +67,7 @@ export default function handler(req, res) {
       "Imagen"  :"/ImagenesCursos/UiDesing.png",
       "TAGS"  :["Diseño","UI Desing","Herramientas de trabajo"],
       "ID"    : 11
-    }])
+    }])}else{
+       return "sin datos"
+    }
 }
